@@ -322,7 +322,7 @@ export const Health = () => {
   switch (page) {
     case 'health':
       return (
-        <div> 
+        <div className="helth"> 
         <HealthReview 
           setPage={setPage}
         />
@@ -330,15 +330,19 @@ export const Health = () => {
       );
     case 'addPlan':
       return (
+        <div className="helth"> 
         <AddPlan 
           setPage={setPage}
         />
+        </div>
       );
     default:
       return (
+        <div className="helth"> 
         <HealthReview 
           setPage={setPage}
         />
+        </div>
       );
   }
 };

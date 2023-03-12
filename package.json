@@ -32,6 +32,7 @@
         "react-scripts": "5.0.1",
         "tesseract.js": "^4.0.2",
         "web-vitals": "^2.1.4",
+        "webrtc-adapter": "^8.2.1",
         "workbox-background-sync": "^6.5.4",
         "workbox-broadcast-update": "^6.5.4",
         "workbox-cacheable-response": "^6.5.4",

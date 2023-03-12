@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
+.helth{
+    margin-top: 7.5vh;
+    margin-bottom: 7vh;
+    
+}
+
 .quantity {
   position: relative;
 }
