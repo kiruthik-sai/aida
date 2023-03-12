@@ -45,8 +45,8 @@ function App() {
     // let isAuth = user ? true : false;
 
     // console.log("Current user: " + auth.currentUser + " isAuth: " + isAuth);
-    // const { user } = useContext(AuthContext);
-    const user=true;
+     const { user } = useContext(AuthContext);
+    //const user=true;
     // const user=1;
   const navigate = useNavigate();
 
