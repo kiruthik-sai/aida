@@ -39,6 +39,7 @@ const Modal = ({ handleClose, text }) => {
 
     const recall = () => {
         console.log(inputText)
+        console.log(auth.currentUser.displayName)
         fetch(url, {
             method: "POST",
             headers: {

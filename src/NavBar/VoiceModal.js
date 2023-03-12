@@ -3,6 +3,7 @@ import Backdrop from "./Backdrop";
 import { useWhisper } from '@chengsokdara/use-whisper';
 
 import "./VoiceModal.css"
+import { useEffect } from "react";
 const dropIn = {
     hidden: {
       y: "100vh",
@@ -30,9 +31,11 @@ const dropIn = {
     },
   };
   
-const test = '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';
 
 const VoiceModal = ({ handleClose, text }) => {
+  
+  const url = "http://35.153.51.197/voice-note"
+
     const {
       recording,
       speaking,
@@ -42,21 +45,45 @@ const VoiceModal = ({ handleClose, text }) => {
       startRecording,
       stopRecording,
     } = useWhisper({
-      apiKey: process.env.REACT_OPENAI_APP_KEY,
+      //apiKey: env.process.REACT_OPENAI_APP_KEY,
+      apiKey: test,
       streaming: true,
       timeSlice: 1_000,
     });
-    startRecording();
-    const handleVoice = () => {
-      stopRecording();
+    useEffect(() => {
+      console.log("hello world")
+      startRecording();
+    },[]);
+    const postData = (text)=>{
+      fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body:JSON.stringify({
+              input: text
+          })
+      }).then(res=>res.json())
+      .then(data=>console.log(data))
+      .catch(err=>console.log(err))
+  }
+    const handleVoice = async () => {
+        console.log("inside handle voice")
+        await stopRecording()
+        console.log("recording stoped")
+        postData(transcript.text)
+        console.log("post done")
+        handleClose();
+      
       //Handle sending the transcript to the backend
-      handleClose();
+      
     }
     return (
       <Backdrop onClick={handleVoice}>
         <motion.div
-          onClick={(e) => {
+          onClick={async (e) => {
             console.log('click');
+            //await handleVoice()
             e.stopPropagation();
           }}
           className='voiceModal'
