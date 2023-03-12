@@ -25,11 +25,13 @@ export const Authentication = () => {
     <Container
         component='main'
         maxWidth='xs'
-        sx={{
+        style={{
           backgroundImage: 'url(https://i.ibb.co/xsHhZBZ/Onboarding-1.png)',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          width: '100vw',
+            height: '100vh',
           position: 'absolute',
           top: '0px',
           right: '0px',
@@ -40,15 +42,20 @@ export const Authentication = () => {
         }}
       >
       <Box
-          sx={{
+          style={{
             position: 'fixed',
-            bottom: '4.5vh',
+            left: 'calc(50% - 120px)',
+            bottom: '7.5vh',
             // display: 'flex',
             // flexDirection: 'column',
             alignItems: 'center',
           }}
         >
           <GoogleButton 
+          style={{
+            width: '240px',
+            height: '50px',
+          }}
           onClick={handleGoogleLogin}
           >
             Register with google
