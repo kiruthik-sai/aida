@@ -22,8 +22,8 @@ const dropIn = {
       transition: {
         duration: 0.1,
         type: "spring",
-        damping: 50,
-        stiffness: 500,
+        damping: 100,
+        stiffness: 100,
       },
     },
   };

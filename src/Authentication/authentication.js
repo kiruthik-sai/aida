@@ -14,7 +14,6 @@ export const Authentication = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(fireBaseAuth, provider).then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
-      
       nav('/home');
     }).catch((error) => {
       console.log(error);

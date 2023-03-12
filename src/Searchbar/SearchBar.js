@@ -21,6 +21,7 @@ const SearchBar = props => {
             className="searchBar"
             onClick={() => (modalOpen ? close() : open())}
             >
+                <div className='searchIcon'><ion-icon  name="search"></ion-icon></div>
             </motion.button>
 
             <AnimatePresence
