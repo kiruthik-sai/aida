@@ -123,18 +123,18 @@
 .sendButton{
     width: 4em;
     height: 40px;
-    border-radius: 25px;
-    background-color: #d194eb;
+    border-radius: 15px;
+    background-color: #8cc5f7;
     color: rgb(0, 0, 0);
     font-size: 20px;
-    border: 1px solid #f26ed1;
+    border: 1px solid #6ea5f2;
 }
 
 /* Create a beautiful text input box */
 .inputText{
     width: 100%;
     height: 40px;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: #f2f2f2;
     color: white;
     font-size: 25px;
