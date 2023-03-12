@@ -3,12 +3,34 @@ import PropTypes from 'prop-types'
 import "./NavBar.css";
 import { useEffect } from "react";
 import { Link,NavLink,useMatch,useResolvedPath } from "react-router-dom";
+import {motion,AnimatePresence} from "framer-motion";
+import { useState } from 'react';
+import VoiceModal from './VoiceModal';
 const NavBar = props => {
- 
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const close = () => setModalOpen(false);
+    const open = () => setModalOpen(true);
+
+
     useEffect(() => {
         let menuToggle = document.querySelector(".menuToggle");
         menuToggle.onclick = function () {
             menuToggle.classList.toggle("active");
+            if (!menuToggle.classList.contains("active")) {
+                setModalOpen(true)
+                if(document.querySelector(".searchBar")) {
+                    
+                    document.querySelector(".searchBar").style.visibility = "hidden";
+                }
+            }
+            else {
+                setModalOpen(false)
+                if(document.querySelector(".searchBar")) {
+                    console.log("searchBar exists and showing")
+                    document.querySelector(".searchBar").style.visibility = "visible";
+                }
+            }
         }
 
         //Write a function to toggle the selected class in the menu's li's according to the current page location
@@ -29,7 +51,16 @@ const NavBar = props => {
         // toggleSelected();
 
     });
-        return (
+        return (<>
+        <AnimatePresence
+            initial={false}
+            mode="wait"
+            onExitComplete={()=>null}
+            >
+
+                
+                {modalOpen && <VoiceModal modalOpen={modalOpen} handleClose={close} />}
+            </AnimatePresence>
             <div className="navigation">
                 <div className="menuToggle active"><div className="middle"><ion-icon name="mic"></ion-icon></div></div>
                 <div className="menu"> 
@@ -42,6 +73,7 @@ const NavBar = props => {
     </ul>
                 </div>
             </div>
+            </>
         );
 }
 

@@ -56,12 +56,7 @@
     transition: 0.5s;
 }
 
-.menuToggle.active:hover{
-    background: #f2d08d;
-    border: 5px solid var(--clr);
 
-    transition: 0.5s;
-}
 
 .menuToggle.active .middle{
     transform: rotate(360deg);

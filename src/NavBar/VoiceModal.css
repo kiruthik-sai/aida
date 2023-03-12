@@ -28,23 +28,7 @@
     color: antiquewhite;
 }
 
-.searchBar{
 
-    
-
-    left: 10vw;
-    width: 80vw;
-    height: 63px;
-    background: #fff;
-    border-radius: 70px;
-    top: 4.5vh;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-
-}
 
 .backdrop{
     position: absolute;
@@ -58,10 +42,10 @@
     align-items: center;
 }
 
-.modal{
+.voiceModal{
     width: clamp(50%, 700px, 90%);
     height: min(50%,300px);
-    background: #8ab379;
+    background: #fbf77a;
     margin: auto;
     padding: 0 2 rem;
     border-radius: 12px;
