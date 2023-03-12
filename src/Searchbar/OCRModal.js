@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
+import OCR from "../components/OCR";
 import "./SearchBar.css"
 const dropIn = {
     hidden: {
@@ -41,7 +42,7 @@ const OCRModal = ({ handleClose, text }) => {
             animate="visible"
             exit="exit"
           >
-           
+            <OCR/>
             <button className="closeButton" onClick={handleClose}>X</button>
           </motion.div>
       </Backdrop>

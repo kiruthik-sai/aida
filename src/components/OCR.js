@@ -5,8 +5,9 @@ import AWS from 'aws-sdk'
 
 const S3_BUCKET ='codefest-ocr';
 const REGION ='us-east-1';
-const accessKeyId = "AKIAV6KH72KMUP77VG77"
-const secretAccessKey = "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"
+//Read from .env file
+const accessKeyId = "AKIAV6KH72KMQTEYYN7H"
+const secretAccessKey = "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"
 
 AWS.config.update({
     accessKeyId: accessKeyId,
@@ -84,8 +85,8 @@ function OCR() {
         const client = new TextractClient({
             region: 'us-east-1',
             credentials: {
-                accessKeyId: 'AKIAV6KH72KMUP77VG77',
-                secretAccessKey: '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',
+                accessKeyId: accessKeyId,
+                secretAccessKey: secretAccessKey,
             },
         })
        
