@@ -12,6 +12,7 @@ import { Health } from "./health/health";
 import AuthContext from "./components/AuthContext";
 import SearchBar from "./Searchbar/SearchBar";
 import { Authentication } from "./Authentication/authentication";
+import Home from "./Home/Home";
 
 const ProtectedRoute = ({ user, redirectPath = '/signin' }) => {
     console.log("Current user: " + auth.currentUser);
@@ -54,7 +55,7 @@ function App() {
         
             <Routes>
                 <Route element={<ProtectedRoute user={user} />}>
-                    <Route path="/home" element={<><h1>Home</h1></>} />
+                    <Route path="/home" element={<Home/>} />
                     <Route path="/meds" element={<Health/>} />
 
                     <Route path="/" element={<Navigate to="/home" />} />

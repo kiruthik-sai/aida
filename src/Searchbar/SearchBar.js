@@ -20,14 +20,16 @@ const SearchBar = props => {
     
         return (
             <>
+            
             <div>
+            
             <motion.button
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
             className="searchBar"
             onClick={() => (modalOpen ? close() : open())}
             >
-                <div className='searchIcon'><ion-icon  name="search"></ion-icon></div>
+                <div className='searchIcon'><ion-icon  name="search"></ion-icon><div className='recalltext'>Recall a memory</div></div>
             </motion.button>
 
             <motion.button

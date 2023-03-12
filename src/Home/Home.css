@@ -1,0 +1,45 @@
+.home{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: calc(100vh - 63px); */
+    /* margin-top: calc(4.5vh + 63px); */
+    
+
+}
+.convo, .note{
+width: 92vw;
+
+border: 0;
+margin-top: 20px;
+/* z-index: 1; */
+box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+
+}
+
+.convo{
+    height: 92vw;
+    margin-top: calc(4.5vh + 83px);
+    border-radius: 25px;
+    background: #DDFEB3;
+ 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 1%;
+}
+
+.note{
+    height: 50vw;
+    border-radius: 25px;
+    background: #FFEDC1;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1%;
+    margin-bottom: calc(4.5vh + 83px);
+
+}

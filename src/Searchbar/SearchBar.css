@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +16,8 @@
     left: 5%;
     font-size: 300%;
     color: #575a89;
+    display: flex;
+    width: 80%;
 }
 
 .ocrIcon{
@@ -49,7 +52,7 @@
     
 
     left: 10vw;
-    width: 65vw;
+    width: 62vw;
     height: 63px;
     background: rgb(255, 255, 255);
     border-radius: 70px;
@@ -58,8 +61,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0;
+    border: 1px solid #575a89;
+    
 
+}
+
+.recalltext{
+    font-size: 40%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
 }
 .ocrBar{
 
@@ -73,7 +85,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0;
+    border: 1px solid #575a89;
 }
 
 
@@ -91,8 +103,8 @@
 
 .modal{
     width: clamp(50%, 700px, 90%);
-    height: min(50%,300px);
-    background: #8ab379;
+    height: clamp(50%,700px,80%);
+    background: #a5c896;
     margin: auto;
     padding: 0 2 rem;
     border-radius: 12px;
@@ -103,10 +115,49 @@
 }
 
 
+.inputTextArea{
+    display: flex;
+    position: absolute;
+    margin-right: 10px;
+    bottom: 4vh;}
+.sendButton{
+    width: 4em;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #d194eb;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border: 1px solid #f26ed1;
+}
+
+/* Create a beautiful text input box */
+.inputText{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    color: white;
+    font-size: 25px;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10vw;
+    
+    padding-left: 7vw;
+}
+.second-input{
+    margin-left: 7vw;
+    margin-right: 6px;
+    
+}
+
+.loginButton{
+
+}
 .OCRModal{
     width: clamp(50%, 700px, 90%);
-    height: min(50%,300px);
-    background: #8ad6d5;
+    height: clamp(50%,700px,80%);
+    background: #b6e0df;
     margin: auto;
     padding: 0 2 rem;
     border-radius: 12px;
@@ -115,4 +166,6 @@
     align-items: center;
 
 }
+
+
 

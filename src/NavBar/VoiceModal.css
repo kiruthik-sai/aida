@@ -45,8 +45,8 @@
 
 .voiceModal{
     width: clamp(50%, 700px, 90%);
-    height: min(50%,300px);
-    background: #fbf77a;
+    height: clamp(50%,700px,80%);
+    background: #FFEDC1;
     margin: auto;
     padding: 0 2 rem;
     border-radius: 12px;
