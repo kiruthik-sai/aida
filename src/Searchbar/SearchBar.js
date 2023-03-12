@@ -5,12 +5,17 @@ import { Link,NavLink,useMatch,useResolvedPath } from "react-router-dom";
 import Modal from './Modal';
 import Backdrop from './Backdrop';
 import {motion,AnimatePresence} from "framer-motion";
+import OCRModal from './OCRModal';
 
 const SearchBar = props => {
     const [modalOpen, setModalOpen] = useState(false);
+    const [ocrmodalOpen, setOcrModalOpen] = useState(false);
 
     const close = () => setModalOpen(false);
     const open = () => setModalOpen(true);
+
+    const ocrclose = () => setOcrModalOpen(false);
+    const ocropen = () => setOcrModalOpen(true);
  
     
         return (
@@ -29,7 +34,7 @@ const SearchBar = props => {
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
             className="ocrBar"
-            onClick={() => (modalOpen ? close() : open())}
+            onClick={() => (ocrmodalOpen ? ocrclose() : ocropen())}
             >
                 <div className='ocrIcon'><ion-icon name="camera"></ion-icon></div>
             </motion.button>
@@ -43,6 +48,7 @@ const SearchBar = props => {
 
                 
                 {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+                {ocrmodalOpen && <OCRModal modalOpen={ocrmodalOpen} handleClose={ocrclose} />}
             </AnimatePresence>
             </>
         );

@@ -101,3 +101,18 @@
     align-items: center;
 
 }
+
+
+.OCRModal{
+    width: clamp(50%, 700px, 90%);
+    height: min(50%,300px);
+    background: #8ad6d5;
+    margin: auto;
+    padding: 0 2 rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
