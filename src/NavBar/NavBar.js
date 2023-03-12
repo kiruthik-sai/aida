@@ -108,7 +108,7 @@ const NavBar = props => {
                     <li style={{ "--i": "0.2s" }}><CustomLink to="/meds"><ion-icon name="medkit"></ion-icon></CustomLink></li>
                     <li></li>
                     <li style={{ "--i": "0.2s" }}><CustomLink to="/chat"><ion-icon name="chatbubble-ellipses"></ion-icon></CustomLink></li>
-                    <li style={{ "--i": "0.1s" }}><CustomLink to="/settings"><ion-icon name="cog"></ion-icon></CustomLink></li>
+                    <li style={{ "--i": "0.1s" }}><CustomLink to="/video"><ion-icon name="videocam"></ion-icon></CustomLink></li>
                 </ul>
             </div>
         </div>

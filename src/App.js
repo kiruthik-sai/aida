@@ -62,7 +62,7 @@ function App() {
                     
 
                     <Route path="/chat" element={<><h1>Chat</h1></>} />
-                    <Route path="/settings" element={<><h1>Settings</h1></>} />
+                    <Route path="/video" element={<><h1>Settings</h1></>} />
                 </Route>
                 <Route path="/signin" element={<Authentication/>} />
 
