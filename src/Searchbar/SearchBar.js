@@ -15,6 +15,7 @@ const SearchBar = props => {
     
         return (
             <>
+            <div>
             <motion.button
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
@@ -23,6 +24,16 @@ const SearchBar = props => {
             >
                 <div className='searchIcon'><ion-icon  name="search"></ion-icon></div>
             </motion.button>
+
+            <motion.button
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+            className="ocrBar"
+            onClick={() => (modalOpen ? close() : open())}
+            >
+                <div className='ocrIcon'><ion-icon name="camera"></ion-icon></div>
+            </motion.button>
+            </div>
 
             <AnimatePresence
             initial={false}

@@ -57,7 +57,8 @@ function App() {
                     <Route path="/home" element={<><h1>Home</h1></>} />
                     <Route path="/meds" element={<Health/>} />
 
-                    <Route path="/" element={<><h1>Recall a Memory</h1></>} />
+                    <Route path="/" element={<Navigate to="/home" />} />
+                    
 
                     <Route path="/chat" element={<><h1>Chat</h1></>} />
                     <Route path="/settings" element={<><h1>Settings</h1></>} />

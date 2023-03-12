@@ -17,6 +17,14 @@
     color: #575a89;
 }
 
+.ocrIcon{
+    position: absolute;
+    /* top: 20%; */
+    /* left: 5%; */
+    font-size: 250%;
+    color: #575a89;
+}
+
 /* Red close button with 'x' */
 .closeButton{
     position: absolute;
@@ -41,7 +49,7 @@
     
 
     left: 10vw;
-    width: 80vw;
+    width: 65vw;
     height: 63px;
     background: rgb(255, 255, 255);
     border-radius: 70px;
@@ -53,6 +61,21 @@
     border: 0;
 
 }
+.ocrBar{
+
+    right: 10vw;
+    width: 14vw;
+    height: 63px;
+    background: rgb(255, 255, 255);
+    border-radius: 25%;
+    top: 4.5vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+
 
 .backdrop{
     position: absolute;
