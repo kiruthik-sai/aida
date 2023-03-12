@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { Health } from "./health/health";
 import AuthContext from "./components/AuthContext";
 import SearchBar from "./Searchbar/SearchBar";
+import { Authentication } from "./Authentication/authentication";
 
 const ProtectedRoute = ({ user, redirectPath = '/signin' }) => {
     console.log("Current user: " + auth.currentUser);
@@ -61,7 +62,7 @@ function App() {
                     <Route path="/chat" element={<><h1>Chat</h1></>} />
                     <Route path="/settings" element={<><h1>Settings</h1></>} />
                 </Route>
-                <Route path="/signin" element={<SignIn />} />
+                <Route path="/signin" element={<Authentication/>} />
 
             </Routes>
         

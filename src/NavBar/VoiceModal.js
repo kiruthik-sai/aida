@@ -3,14 +3,14 @@ import Backdrop from "./Backdrop";
 import "./VoiceModal.css"
 const dropIn = {
     hidden: {
-      y: "-100vh",
+      y: "100vh",
       opacity: 0,
     },
     visible: {
       y: "0",
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: 0.1,
         type: "spring",
         damping: 90,
         stiffness: 500,
@@ -20,9 +20,9 @@ const dropIn = {
       y: "100vh",
       opacity: 0,
       transition: {
-        duration: 2,
+        duration: 0.1,
         type: "spring",
-        damping: 90,
+        damping: 50,
         stiffness: 500,
       },
     },
