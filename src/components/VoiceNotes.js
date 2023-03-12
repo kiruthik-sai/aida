@@ -34,10 +34,14 @@ export default function VoiceNotes() {
     
       return (
         <div>
-          <p>Recording: {recording}</p>
-          <p>Speaking: {speaking}</p>
-          <p>Transcribing: {transcribing}</p>
-          <p>Transcribed Text: {transcript.text}</p>
+          
+          <p
+          style={{
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+
+          }}
+          >Transcribed Text: {transcript.text}</p>
           <button onClick={() => startRecording()}>Start</button>
           <button onClick={() => pauseRecording()}>Pause</button>
           <button onClick={() => stopRecording()}>Stop</button>

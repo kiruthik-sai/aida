@@ -136,7 +136,7 @@ class TmpVideoChatContainer extends React.Component {
 
     render () {
       return (
-        <div>
+        <div className='wholeVid'>
           <VideoChat
             startCall={this.startCall}
             onLogin={this.onLogin}
@@ -145,7 +145,7 @@ class TmpVideoChatContainer extends React.Component {
             connectedUser={this.state.connectedUser}
             update={this.update}
           />
-          <button onClick={()=>{
+          <button className='buttonVid' style={{backgroundColor:'#ed8b8b'}}  onClick={()=>{
             this.state.localStream.getTracks().forEach(function(track) {
               track.stop();
             });
@@ -177,14 +177,25 @@ export const VideoChatContainer = () =>{
   return (
     <>
     <TmpVideoChatContainer/>
-    <div>
-          <p>Recording: {recording}</p>
-          <p>Speaking: {speaking}</p>
-          <p>Transcribing: {transcribing}</p>
-          <p>Transcribed Text: {transcript.text}</p>
-          <button onClick={() => startRecording()}>Start</button>
-          <button onClick={() => pauseRecording()}>Pause</button>
-          <button onClick={() => stopRecording()}>Stop</button>
+    <div className='wholeVid'>
+          
+          <p
+          style={{
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+margin:'5px'
+          }}
+          >Transcribed Text: {transcript.text}</p>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+
+          }}>
+          <button className='buttonVid' style={{backgroundColor:'#9bec8b'}} onClick={() => startRecording()}>Start</button>
+          <button className='buttonVid' style={{backgroundColor:'#edec8b'}} onClick={() => pauseRecording()}>Pause</button>
+          <button className='buttonVid' style={{backgroundColor:'#ed8b8b'}} onClick={() => stopRecording()}>Stop</button>
+          </div>
         </div>
     </>
   )
