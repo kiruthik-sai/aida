@@ -9,8 +9,17 @@ import VoiceModal from './VoiceModal';
 const NavBar = props => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    const close = () => setModalOpen(false);
-    const open = () => setModalOpen(true);
+    const close = () => {setModalOpen(false);
+        let menuToggle = document.querySelector(".menuToggle");
+        if(menuToggle ) {
+    menuToggle.classList.add("active");}
+    };
+    const open = () => {setModalOpen(true)
+        let menuToggle = document.querySelector(".menuToggle");
+        if(menuToggle) {
+    menuToggle.classList.remove("active");
+        }
+    };
 
 
     useEffect(() => {
