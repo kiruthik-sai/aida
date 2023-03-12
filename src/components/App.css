@@ -1,4 +1,10 @@
+.wholeVid{
+  display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+}
 h1{
   margin:0
 }
@@ -19,8 +25,8 @@ h1{
 .app h3 b{
   color: rgb(252, 212, 33);
 }
-/* 
-input{
+
+.inputVid{
   width: 400px;
   height: 30px;
   padding:10px;
@@ -29,23 +35,23 @@ input{
   box-shadow: 1px 1px 0.8px #0c1d2e;
   margin-top: 10px;
   margin-bottom: 4px;
-} */
-/* button{
+}
+.buttonVid{
+    margin: 3px;
   width: 100px;
   height:40px;
-  background-color: #ffffff;
+  background-color: #6ea5f2;
   border:none;
-  box-shadow: 2px 2px 1px #18619d;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-   
-} */
+  /* box-shadow: 2px 2px 1px #18619d; */
+  border-radius: 15px;
+  
+  
+}
 video{
   width: 200px;
   height: 100%;
 }
-.form{
+.formVid{
   display: flex;
   flex-direction: column;
   margin-top: 50px;

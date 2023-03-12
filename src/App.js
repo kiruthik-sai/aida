@@ -14,6 +14,7 @@ import SearchBar from "./Searchbar/SearchBar";
 import { Authentication } from "./Authentication/authentication";
 import Home from "./Home/Home";
 import VideoChatContainer from "./components/VideoChatContainer";
+import Chat from "./NavBar/Chat";
 
 const ProtectedRoute = ({ user, redirectPath = '/signin' }) => {
     console.log("Current user: " + auth.currentUser);
@@ -62,7 +63,7 @@ function App() {
                     <Route path="/" element={<Navigate to="/home" />} />
                     
 
-                    <Route path="/chat" element={<><h1>Chat</h1></>} />
+                    <Route path="/chat" element={<Chat/>} />
                     <Route path="/video" element={<VideoChatContainer/>} />
                 </Route>
                 <Route path="/signin" element={<Authentication/>} />

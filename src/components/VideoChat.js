@@ -31,7 +31,11 @@ export default class VideoChat extends React.Component {
   renderVideos = () => {
     return <div className={classnames('videos', { active: this.state.isLoggedIn })}>
       <div>
-        <label>{auth.currentUser.displayName}</label>
+        <label
+        style={{
+            fontSize: '1.5rem',
+        }}
+        >{auth.currentUser.displayName}</label>
 
         <video ref={this.props.setLocalVideoRef} autoPlay playsInline></video>
       </div>
@@ -46,17 +50,25 @@ export default class VideoChat extends React.Component {
 
   renderForms = () => {
     return this.state.isLoggedIn
-      ? <div key='a' className='form'>
-        <label>Call to</label>
-        <input value={this.state.userToCall} type="text" onChange={e => this.setState({ userToCall: e.target.value })} />
-        <button onClick={this.onStartCallClicked} id="call-btn" className="btn btn-primary">Call</button>
+      ? <div key='a' className='form' 
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      >
+        <label style={{
+            fontSize: '1.5rem',
+        }}>Call to:</label>
+        <input className='inputVid' value={this.state.userToCall} type="text" onChange={e => this.setState({ userToCall: e.target.value })} />
+        <button  onClick={this.onStartCallClicked} style={{backgroundColor:'#9bec8b'}}  id="call-btn" className="buttonVid">Call</button>
 
       </div>
       : <div key='b' className='form'>
-        <label>Type a name</label>
         {/* <input value={auth.currentUser.displayName} type="text" onChange={e => this.setState({ username: e.target.value })} /> */}
 
-        <button onClick={this.onLoginClicked} id="login-btn" className="btn btn-primary">Start a Call</button>
+        <button onClick={this.onLoginClicked} id="login-btn" style={{backgroundColor:'#9bec8b'}} className=" buttonVid">Start a Call</button>
 
       </div>
   }
